@@ -41,4 +41,3 @@ class Leaderboard:
     def ranked(self):
         """Return results from highest to lowest score."""
         return sorted(self.results, key=lambda item: item["score"], reverse=True)
-    

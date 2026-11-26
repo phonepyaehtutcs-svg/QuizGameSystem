@@ -37,4 +37,3 @@ class Question:
         for letter in LETTERS:
             lines.append(f"{letter}. {self.options[letter]}")
         return "\n".join(lines)
-    
