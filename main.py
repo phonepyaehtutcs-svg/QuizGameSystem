@@ -2,6 +2,7 @@
 
 from quiz_game.game import Leaderboard, Quiz
 from quiz_game.models import LETTERS, Question
+from quiz_game.storage import load_questions, load_scores, save_questions, save_scores
 
 MENU = """
 ========================================
@@ -82,16 +83,17 @@ def view_leaderboard(board):
 
 def main():
     """Show the menu until the user exits."""
-    options = {"A": "3", "B": "4", "C": "5", "D": "6"}
-    questions = [Question("What is 2 + 2?", options, "B")]
-    board = Leaderboard()
+    questions = load_questions()
+    board = Leaderboard(load_scores())
     while True:
         print(MENU)
         choice = input("Enter your choice: ").strip()
         if choice == "1":
             start_quiz(questions, board)
+            save_scores(board.results)
         elif choice == "2":
             add_question(questions)
+            save_questions(questions)
         elif choice == "3":
             view_questions(questions)
         elif choice == "4":

@@ -1,0 +1,42 @@
+[
+  {
+    "text": "What is 2 + 2?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "answer": "B"
+  },
+  {
+    "text": "Which keyword defines a function?",
+    "options": {
+      "A": "func",
+      "B": "define",
+      "C": "def",
+      "D": "fun"
+    },
+    "answer": "C"
+  },
+  {
+    "text": "Which type stores key-value pairs?",
+    "options": {
+      "A": "list",
+      "B": "dict",
+      "C": "tuple",
+      "D": "str"
+    },
+    "answer": "B"
+  },
+  {
+    "text": "if the code works but it's messy should you fix it?",
+    "options": {
+      "A": "yes",
+      "B": "no",
+      "C": "-",
+      "D": "-"
+    },
+    "answer": "B"
+  }
+]
